@@ -1,6 +1,6 @@
-#include <vector>
-typedef long long ll;
 // 参考：https://atcoder.jp/contests/abc160/submissions/11287086
+
+#include <vector>
 
 /// <summary>
 /// 階乗計算を扱うクラス。
@@ -12,9 +12,9 @@ typedef long long ll;
 template<unsigned MOD_> class Factorial {
 private:
     // fact[i] = i! (mod MOD_)
-    std::vector<ll> fact;
+    std::vector<long long> fact;
     // inv[i] = 1/(i!) (mod MOD_)
-    std::vector<ll> inv;
+    std::vector<long long> inv;
     /// <summary>
     /// 高速指数計算
     /// </summary>
@@ -22,9 +22,9 @@ private:
     /// <param name='b'>指数を指定する。</param>
     /// <returns>a^bを計算する。</returns>
     /// <remarks>計算オーダーはO(log b)。</remarks>
-    ll quick_pow(ll a, ll b) {
+    long long quick_pow(long long a, long long b) {
         a %= MOD_;
-        ll res = 1;
+        long long res = 1;
         while (b) {
             if (b & 1) res = (res * a) % MOD_;
             a = (a * a) % MOD_;
@@ -42,7 +42,7 @@ public:
     /// <remarks>計算オーダーはO(n + log(MOD_))。</remarks>
     Factorial(int n) {
         ++n;
-        fact = inv = std::vector<ll>(n);
+        fact = inv = std::vector<long long>(n);
         fact[0] = inv[0] = 1;
         for (int i = 1; i < n; i++) {
             fact[i] = (fact[i - 1] * i) % MOD_;
@@ -61,7 +61,7 @@ public:
     /// <param name='n'>nの値を指定する。</param>
     /// <returns>n! % MOD_。</returns>
     /// <remarks>計算オーダーはO(1)。</remarks>
-    ll get(int n) {
+    long long get(int n) {
         return fact[n];
     }
     /// <summary>
@@ -70,7 +70,7 @@ public:
     /// <param name='n'>nの値を指定する。</param>
     /// <returns>(n! ^ (MOD_ - 2)) % MOD_。</returns>
     /// <remarks>計算オーダーはO(1)。</remarks>
-    ll get_inv(int n) {
+    long long get_inv(int n) {
         return inv[n];
     }
     /// <summary>
@@ -80,7 +80,7 @@ public:
     /// <param name='r'>nPrのrの値を指定する。</param>
     /// <returns>nPr % MOD_。</returns>
     /// <remarks>計算オーダーはO(1)。</remarks>
-    ll permutation(int n, int r) {
+    long long permutation(int n, int r) {
         return (fact[n] * inv[n - r]) % MOD_;
     }
     /// <summary>
@@ -90,7 +90,7 @@ public:
     /// <param name='r'>nCrのrの値を指定する。</param>
     /// <returns>nCr % MOD_。</returns>
     /// <remarks>計算オーダーはO(1)。</remarks>
-    ll combination(int n, int r) {
+    long long combination(int n, int r) {
         return (permutation(n, r) * inv[r]) % MOD_;
     }
 };
