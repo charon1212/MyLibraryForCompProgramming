@@ -65,8 +65,8 @@ public:
     /// <summary>
     /// 有向グラフの辺を登録する。
     /// </summary>
-    /// <param name='from_'>辺の始点を指定する。</param>
-    /// <param name='to_'>辺の終点を指定する。</param>
+    /// <param name='from_'>辺の始点を0から始まる整数で指定する。</param>
+    /// <param name='to_'>辺の終点を0から始まる整数で指定する。</param>
     void add_directed_edge(int from_, int to_) {
         // 辺の数に1を足す。足した後の値が、これから登録する辺のedgeIDとなる。
         cnt++;
@@ -83,8 +83,8 @@ public:
     /// <summary>
     /// 無向グラフの辺を登録する。
     /// </summary>
-    /// <param name='from_'>辺の始点を指定する。</param>
-    /// <param name='to_'>辺の終点を指定する。</param>
+    /// <param name='from_'>辺の始点を0から始まる整数で指定する。</param>
+    /// <param name='to_'>辺の終点を0から始まる整数で指定する。</param>
     void add_undirected_edge(int from_, int to_) {
         add_directed_edge(from_, to_);
         add_directed_edge(to_, from_);
