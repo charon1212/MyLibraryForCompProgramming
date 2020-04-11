@@ -12,9 +12,9 @@ typedef long long ll;
 template<unsigned MOD_> class Factorial {
 private:
     // fact[i] = i! (mod MOD_)
-    vector<ll> fact;
+    std::vector<ll> fact;
     // inv[i] = 1/(i!) (mod MOD_)
-    vector<ll> inv;
+    std::vector<ll> inv;
     /// <summary>
     /// 高速指数計算
     /// </summary>
@@ -42,7 +42,7 @@ public:
     /// <remarks>計算オーダーはO(n + log(MOD_))。</remarks>
     Factorial(int n) {
         ++n;
-        fact = inv = vector<ll>(n);
+        fact = inv = std::vector<ll>(n);
         fact[0] = inv[0] = 1;
         for (int i = 1; i < n; i++) {
             fact[i] = (fact[i - 1] * i) % MOD_;
