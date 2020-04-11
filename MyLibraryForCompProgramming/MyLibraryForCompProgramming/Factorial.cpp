@@ -25,8 +25,7 @@ public:
     /// äTóv
     /// </summary>
     /// <param name='n'>ê‡ñæ</param>
-    /// <param name='m'>ê‡ñæ2</param>
-    Factorial(int n, int m) {
+    Factorial(int n) {
         ++n;
         fact = inv = vector<ll>(n);
         fact[0] = inv[0] = 1;
