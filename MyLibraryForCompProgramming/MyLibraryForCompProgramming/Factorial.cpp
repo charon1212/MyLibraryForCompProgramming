@@ -20,8 +20,8 @@ private:
     /// </summary>
     /// <param name='a'>基数を指定する。</param>
     /// <param name='b'>指数を指定する。</param>
-    /// <returns>a^bを計算する</returns>
-    /// <remarks>計算オーダーはO(log b)</remarks>
+    /// <returns>a^bを計算する。</returns>
+    /// <remarks>計算オーダーはO(log b)。</remarks>
     ll quick_pow(ll a, ll b) {
         a %= MOD_;
         ll res = 1;
@@ -59,8 +59,8 @@ public:
     /// n!を法MOD_のもとで取得する。
     /// </summary>
     /// <param name='n'>nの値を指定する。</param>
-    /// <returns>n! % MOD_</returns>
-    /// <remarks>計算オーダーはO(1)</remarks>
+    /// <returns>n! % MOD_。</returns>
+    /// <remarks>計算オーダーはO(1)。</remarks>
     ll get(int n) {
         return fact[n];
     }
@@ -68,8 +68,8 @@ public:
     /// 1/n!を法MOD_のもとで取得する。
     /// </summary>
     /// <param name='n'>nの値を指定する。</param>
-    /// <returns>(n! ^ (MOD_ - 2)) % MOD_</returns>
-    /// <remarks>計算オーダーはO(1)</remarks>
+    /// <returns>(n! ^ (MOD_ - 2)) % MOD_。</returns>
+    /// <remarks>計算オーダーはO(1)。</remarks>
     ll get_inv(int n) {
         return inv[n];
     }
@@ -78,8 +78,8 @@ public:
     /// </summary>
     /// <param name='n'>nPrのnの値を指定する。</param>
     /// <param name='r'>nPrのrの値を指定する。</param>
-    /// <returns>nPr % MOD_</returns>
-    /// <remarks>計算オーダーはO(1)</remarks>
+    /// <returns>nPr % MOD_。</returns>
+    /// <remarks>計算オーダーはO(1)。</remarks>
     ll permutation(int n, int r) {
         return (fact[n] * inv[n - r]) % MOD_;
     }
@@ -88,8 +88,8 @@ public:
     /// </summary>
     /// <param name='n'>nCrのnの値を指定する。</param>
     /// <param name='r'>nCrのrの値を指定する。</param>
-    /// <returns>nCr % MOD_</returns>
-    /// <remarks>計算オーダーはO(1)</remarks>
+    /// <returns>nCr % MOD_。</returns>
+    /// <remarks>計算オーダーはO(1)。</remarks>
     ll combination(int n, int r) {
         return (permutation(n, r) * inv[r]) % MOD_;
     }
