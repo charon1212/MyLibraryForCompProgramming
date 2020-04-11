@@ -13,16 +13,25 @@ namespace MySample {
     class SampleClass {
     private:
         int num;
-        std::string s;
+        std::string message;
     public:
         SampleClass(int n) {
             num = n;
-            s = "";
+            message = "";
         }
-        SampleClass(std::string s) {
-            
+        SampleClass(std::string msg) {
+            num = 0;
+            this->message = msg;
         }
-
+        int getNum() {
+            return num;
+        }
+        std::string getMessage() {
+            return message;
+        }
+        void increment() {
+            num++;
+        }
     };
 
 }
