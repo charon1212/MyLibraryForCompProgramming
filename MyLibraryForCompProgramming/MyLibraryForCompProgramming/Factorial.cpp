@@ -36,7 +36,7 @@ private:
 public:
     /// <summary>
     /// Factorialクラスのコンストラクタ。
-    /// i!と(1/i!)を計算する。(0 <= i <= n)
+    /// i!と(1/i!)を計算する。(0 &lt;= i &lt;= n)
     /// </summary>
     /// <param name='n'>階乗計算の上限を指定する。</param>
     /// <remarks>計算オーダーはO(n + log(MOD_))。</remarks>
