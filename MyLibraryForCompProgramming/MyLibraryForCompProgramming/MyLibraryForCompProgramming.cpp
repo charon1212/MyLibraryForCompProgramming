@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <string>
+#include "./Factorial.cpp"
 
 int main()
 {
