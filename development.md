@@ -8,6 +8,10 @@
 ### 1
 
 単体テストの環境を整備する。  
+参考文献：
+
+- [Visual Studio で C/C++ 用の単体テストを作成する](https://docs.microsoft.com/ja-jp/visualstudio/test/writing-unit-tests-for-c-cpp?view=vs-2019)
+- [Microsoft.VisualStudio.TestTools.CppUnitTestFramework API リファレンス](https://docs.microsoft.com/ja-jp/visualstudio/test/microsoft-visualstudio-testtools-cppunittestframework-api-reference?view=vs-2019)
 
 ### 2
 
