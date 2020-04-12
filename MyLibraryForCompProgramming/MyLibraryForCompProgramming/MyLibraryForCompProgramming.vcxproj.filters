@@ -18,6 +18,9 @@
     <ClCompile Include="MyLibraryForCompProgramming.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="Graph.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
     <ClCompile Include="Factorial.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
