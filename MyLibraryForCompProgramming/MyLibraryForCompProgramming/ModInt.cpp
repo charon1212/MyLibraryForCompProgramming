@@ -57,7 +57,7 @@ public:
     ModInt& operator+=(const ModInt y) { if ((value += y.value) >= MOD_) value -= MOD_; return *this; }
     ModInt& operator-=(const ModInt y) { if ((value -= y.value) & (1u << 31)) value += MOD_; return *this; }
     ModInt& operator*=(const ModInt y) { value = (unsigned long long)value * y.value % MOD_; return *this; }
-    ModInt& operator/=(const ModInt y) { value = (unsigned long long)value * y.inv().value % MOD_; return *this; }
+    ModInt& operator/=(const ModInt y) { value = (unsigned long long)value * y.inverse().value % MOD_; return *this; }
     ModInt operator +(const ModInt y) const { return ModInt(*this) += y; }
     ModInt operator -(const ModInt y) const { return ModInt(*this) -= y; }
     ModInt operator *(const ModInt y) const { return ModInt(*this) *= y; }
