@@ -1,10 +1,27 @@
 ﻿#include <iostream>
 #include <string>
+#include "./Factorial.cpp"
+#include "./ModInt.cpp"
+
+void ModIntIostreamFuncTest();
 
 int main()
 {
     std::cout << "Hello World!\n";
+    // ModIntのI/O streamのテストを実施する場合は、下記の関数を実行する。
+    //ModIntIostreamFuncTest();
     return 0;
+}
+
+void ModIntIostreamFuncTest() {
+    while (true) {
+        ModInt<23> a;
+        std::cin >> a;
+        if (a == 0) break;
+        std::cout << a << std::endl;
+        std::cout << (a + ModInt<23>(5)) << std::endl;
+        std::cout << "=============\n";
+    }
 }
 
 namespace MySample {
