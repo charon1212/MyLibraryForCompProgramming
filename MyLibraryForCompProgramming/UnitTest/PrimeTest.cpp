@@ -197,12 +197,13 @@ namespace PrimeTest
             Assert::AreEqual(1, m[83ll]);
             Assert::AreEqual(1, m[19173303833ll]);
 
+            // 時間がかかるためコメントアウト。たまにチェックすること。。。
             // 1000000000000000009 = 1000000000000000009
-            Assert::IsTrue(is_prime(1000000000000000009ll));
-            Assert::AreEqual(2, calc_divisor_count(1000000000000000009ll));
-            m = calc_prime_factor(1000000000000000009ll);
-            Assert::AreEqual(1, (int)m.size());
-            Assert::AreEqual(1, m[1000000000000000009ll]);
+            // Assert::IsTrue(is_prime(1000000000000000009ll));
+            // Assert::AreEqual(2, calc_divisor_count(1000000000000000009ll));
+            // m = calc_prime_factor(1000000000000000009ll);
+            // Assert::AreEqual(1, (int)m.size());
+            // Assert::AreEqual(1, m[1000000000000000009ll]);
 
         }
     };
