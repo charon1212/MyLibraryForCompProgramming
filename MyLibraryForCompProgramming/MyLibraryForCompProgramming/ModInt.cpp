@@ -65,6 +65,7 @@ public:
 
     // <<<< COMPARISON OPERATOR >>>>
     bool operator<(const ModInt y) const { return value < y.value; }
+    bool operator<=(const ModInt y) const { return value <= y.value; }
     bool operator==(const ModInt y) const { return value == y.value; }
     bool operator!=(const ModInt y) const { return value != y.value; }
 
