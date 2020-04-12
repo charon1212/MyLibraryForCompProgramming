@@ -1,13 +1,13 @@
 #include<map>
 
 // ‘f””»’è
-bool is_prime(long long x) {
+inline bool is_prime(long long x) {
     for (long long i = 2; i * i <= x; i++) if (x % i == 0) return false;
     return true;
 }
 
 // ‘fˆö”•ª‰ğ
-std::map<long long, int> calc_prime_factor(long long x) {
+inline std::map<long long, int> calc_prime_factor(long long x) {
     std::map<long long, int> ret;
     // 2,3‚ğæ‚É‚â‚éB
     while (x % 2 == 0) {
@@ -34,7 +34,7 @@ std::map<long long, int> calc_prime_factor(long long x) {
 }
 
 // –ñ”‚Ì‘”‚ğæ“¾
-int calc_divisor_count(long long x) {
+inline int calc_divisor_count(long long x) {
     auto pFactor = calc_prime_factor(x);
     int ret = 1;
     for (auto it = pFactor.begin(); it != pFactor.end(); it++) { ret *= (it->second + 1); }
