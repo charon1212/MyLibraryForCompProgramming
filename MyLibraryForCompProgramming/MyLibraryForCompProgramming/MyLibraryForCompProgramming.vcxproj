@@ -151,6 +151,7 @@
     <ClCompile Include="Factorial.cpp" />
     <ClCompile Include="ModInt.cpp" />
     <ClCompile Include="MyLibraryForCompProgramming.cpp" />
+    <ClCompile Include="Prime.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

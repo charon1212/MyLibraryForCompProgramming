@@ -2,6 +2,7 @@
 #include <string>
 #include "./Factorial.cpp"
 #include "./ModInt.cpp"
+#include "./Prime.cpp"
 
 void ModIntIostreamFuncTest();
 
