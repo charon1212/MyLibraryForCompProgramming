@@ -7,7 +7,7 @@ bool is_prime(long long x) {
 }
 
 // ‘fˆö”•ª‰ğ
-std::map<long long, int> primeFactor(long long x) {
+std::map<long long, int> calc_prime_factor(long long x) {
     std::map<long long, int> ret;
     // 2,3‚ğæ‚É‚â‚éB
     while (x % 2 == 0) {
@@ -34,8 +34,8 @@ std::map<long long, int> primeFactor(long long x) {
 }
 
 // –ñ”‚Ì‘”‚ğæ“¾
-int divisorCount(long long x) {
-    auto pFactor = primeFactor(x);
+int calc_divisor_count(long long x) {
+    auto pFactor = calc_prime_factor(x);
     int ret = 1;
     for (auto it = pFactor.begin(); it != pFactor.end(); it++) { ret *= (it->second + 1); }
     return ret;
