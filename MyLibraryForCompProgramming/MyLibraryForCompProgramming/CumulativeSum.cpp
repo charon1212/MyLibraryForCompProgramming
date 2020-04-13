@@ -50,7 +50,7 @@ public:
     }
 
     long long query(int startU, int startV, int endU, int endV) {
-        return data[endU][endV] - data[startU][startV];
+        return data[endU][endV] - data[endU][startV] - data[startU][endV] + data[startU][startV];
     }
 };
 
@@ -82,6 +82,11 @@ public:
     }
 
     long long query(int startU, int startV, int startW, int endU, int endV, int endW) {
+        return data[endU][endV][endW]
+            - data[startU][endV][endW] + data[endU][startV][startW]
+            - data[endU][startV][endW] + data[startU][endV][startW]
+            - data[endU][endV][startW] + data[startU][startV][endW]
+            - data[startU][startV][startW];
         return data[endU][endV][endW] - data[startU][startV][startW];
     }
 };
