@@ -156,6 +156,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CumulativeSumTest.cpp" />
     <ClCompile Include="GraphTest.cpp" />
     <ClCompile Include="FactorialTest.cpp" />
     <ClCompile Include="pch.cpp">
