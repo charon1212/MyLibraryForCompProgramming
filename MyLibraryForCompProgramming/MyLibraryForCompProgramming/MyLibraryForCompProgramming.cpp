@@ -3,6 +3,7 @@
 #include "./Factorial.cpp"
 #include "./ModInt.cpp"
 #include "./Prime.cpp"
+#include "./CumulativeSum.cpp"
 
 void ModIntIostreamFuncTest();
 
