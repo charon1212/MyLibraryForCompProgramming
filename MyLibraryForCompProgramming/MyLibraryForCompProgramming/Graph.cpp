@@ -55,7 +55,7 @@ public:
     /// <param name='edgeMax'>辺の最大登録数を指定する。Graph.resizeで後から変更できる。</param>
     Graph(int vertexMax, int edgeMax) {
         edgeMax++;
-        head = std::vector<int>(vertexMax,0);
+        head = std::vector<int>(vertexMax, 0);
         to = std::vector<int>(edgeMax, 0);
         from = std::vector<int>(edgeMax, 0);
         next = std::vector<int>(edgeMax, 0);
@@ -75,7 +75,7 @@ public:
         // toを登録する。
         to[cnt] = to_;
         // この辺の次にedgeIDが小さい辺のedgeIDは、head[from_]に登録されている。
-        next[cnt] = head[from_];        
+        next[cnt] = head[from_];
         // 始点from_から出ている辺のedgeIDで最大のものは、今登録したcnt。
         head[from_] = cnt;
     }
@@ -193,9 +193,10 @@ public:
     /// </summary>
     /// <param name='from_'>辺の始点を0から始まる整数で指定する。</param>
     /// <param name='to_'>辺の終点を0から始まる整数で指定する。</param>
-    void add_undirected_edge(int from_, int to_) {
-        add_directed_edge(from_, to_);
-        add_directed_edge(to_, from_);
+    /// <param name='weight_'>辺の重みを指定する。</param>
+    void add_undirected_edge(int from_, int to_, T weight_) {
+        add_directed_edge(from_, to_, weight_);
+        add_directed_edge(to_, from_, weight_);
     }
 
     /// <summary>
