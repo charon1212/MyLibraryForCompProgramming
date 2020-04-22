@@ -143,7 +143,7 @@ public:
     /// デフォルトコンストラクタ。
     /// このコンストラクタで作成したインスタンスの関数はほとんど利用できないため注意。
     /// </summary>
-    Graph() {
+    WeightedGraph() {
         head = std::vector<int>(0);
         to = std::vector<int>(0);
         from = std::vector<int>(0);
@@ -157,7 +157,7 @@ public:
     /// </summary>
     /// <param name='vertexMax'>頂点の最大登録数を指定する。Graph.resizeで後から変更できる。</param>
     /// <param name='edgeMax'>辺の最大登録数を指定する。Graph.resizeで後から変更できる。</param>
-    Graph(int vertexMax, int edgeMax) {
+    WeightedGraph(int vertexMax, int edgeMax) {
         edgeMax++;
         head = std::vector<int>(vertexMax, 0);
         to = std::vector<int>(edgeMax, 0);
