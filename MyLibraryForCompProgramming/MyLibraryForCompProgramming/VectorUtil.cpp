@@ -48,7 +48,8 @@ template<typename T> inline std::vector<std::vector<std::vector<T>>> construct_v
 template<typename T> inline typename std::vector<T>::iterator find_binary_search(typename std::vector<T>::iterator first, typename std::vector<T>::iterator last, T value) {
 
     auto it = std::lower_bound(first, last, value);
+    if (it == last) return last;
     if ((*it) == value) return it;
-    return end;
+    return last;
 
 }
