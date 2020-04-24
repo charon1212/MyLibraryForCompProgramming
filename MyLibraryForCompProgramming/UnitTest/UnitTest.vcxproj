@@ -168,6 +168,7 @@
     <ClCompile Include="PrimeTest.cpp" />
     <ClCompile Include="SampleUnitTest.cpp" />
     <ClCompile Include="ModIntTest.cpp" />
+    <ClCompile Include="VectorUtilTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
