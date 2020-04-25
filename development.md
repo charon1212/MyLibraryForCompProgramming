@@ -86,3 +86,7 @@ ModIntのバグかもしれない現象があったので調査する。
 現象：[AtCoder Beginner Contest 163 D - Sum of Large Numbers](https://atcoder.jp/contests/abc163/tasks/abc163_d)を解いてるときにバグった。  
 ただ、その後ModIntの実装をやめて解いたがうまく動かず、結局別の場所のバグを直して提出しACとなったため、ModIntが悪いかどうか不明。  
 →ModIntのバグではなかったため、修正は不要。[実装例](https://atcoder.jp/contests/abc163/submissions/12293300)
+
+### 14
+
+WeightedGraphのコンストラクタでweight変数をvector<int>で初期化している問題を修正する。
