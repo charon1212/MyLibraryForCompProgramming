@@ -3,6 +3,7 @@
 #include "../MyLibraryForCompProgramming/Graph.cpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+using namespace std::literals::string_literals; //std::string‚ÌƒŠƒeƒ‰ƒ‹—p
 
 namespace GraphTest
 {
@@ -293,6 +294,29 @@ namespace GraphTest
 
         }
 
+        TEST_METHOD(GraphTestMethod_WeightedGraph_StringWeight)
+        {
+            auto g = WeightedGraph<std::string>(3, 3);
+            g.add_directed_edge(0, 1, "aaa");
+            g.add_directed_edge(1, 2, "bbb");
+            g.add_directed_edge(2, 0, "ccc");
+
+            int e0 = g.head[0];
+            Assert::AreEqual(0, g.from[e0]);
+            Assert::AreEqual(1, g.to[e0]);
+            Assert::AreEqual("aaa"s, g.weight[e0]);
+            Assert::AreEqual(0, g.next[e0]);
+            int e1 = g.head[1];
+            Assert::AreEqual(1, g.from[e1]);
+            Assert::AreEqual(2, g.to[e1]);
+            Assert::AreEqual("bbb"s, g.weight[e1]);
+            Assert::AreEqual(0, g.next[e1]);
+            int e2 = g.head[2];
+            Assert::AreEqual(2, g.from[e2]);
+            Assert::AreEqual(0, g.to[e2]);
+            Assert::AreEqual("ccc"s, g.weight[e2]);
+            Assert::AreEqual(0, g.next[e2]);
+        }
 
     };
 }
