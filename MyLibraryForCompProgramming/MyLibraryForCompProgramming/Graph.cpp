@@ -163,7 +163,7 @@ public:
         to = std::vector<int>(edgeMax, 0);
         from = std::vector<int>(edgeMax, 0);
         next = std::vector<int>(edgeMax, 0);
-        weight = std::vector<T>(edgeMax, 0);
+        weight = std::vector<T>(edgeMax);
         cnt = 0;
     }
 
