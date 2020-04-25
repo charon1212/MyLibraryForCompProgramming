@@ -4,6 +4,7 @@
 #include "./ModInt.cpp"
 #include "./Prime.cpp"
 #include "./CumulativeSum.cpp"
+#include "./Graph.cpp"
 
 void ModIntIostreamFuncTest();
 
