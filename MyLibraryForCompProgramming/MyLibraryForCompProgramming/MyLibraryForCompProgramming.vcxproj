@@ -148,6 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CumulativeSum.cpp" />
+    <ClCompile Include="Debugger.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="Factorial.cpp" />
     <ClCompile Include="Math.cpp" />
