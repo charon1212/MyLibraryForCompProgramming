@@ -150,6 +150,7 @@
     <ClCompile Include="CumulativeSum.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="Factorial.cpp" />
+    <ClCompile Include="Math.cpp" />
     <ClCompile Include="ModInt.cpp" />
     <ClCompile Include="MyLibraryForCompProgramming.cpp" />
     <ClCompile Include="Prime.cpp" />
