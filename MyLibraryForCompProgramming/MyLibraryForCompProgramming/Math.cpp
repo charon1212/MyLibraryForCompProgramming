@@ -9,12 +9,11 @@
 /// </return>
 /// <example>
 /// ループのサンプル。この例では2進数表現で、111～11100の組み合わせを取得する。：
+/// <code>
 /// int n = 5, k = 3;
-/// for (int bit = (1 << k) - 1; bit < (1 << n); bit = next_combination(bit)) {
+/// for (int bit = (1 ＜＜ k) - 1; bit ＜ (1 ＜＜ n); bit = next_combination(bit)) {
 ///     // (何らかの処理)
 /// }
-/// <code>
-/// 
 /// </code>
 /// </example>
 int next_combination(int sub) {
