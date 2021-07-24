@@ -1,6 +1,7 @@
 // 参考：https://atcoder.jp/contests/abc160/submissions/11280884
 
 #include <vector>
+#include <iostream>
 
 /// <summary>
 /// グラフの構造を表すクラス
@@ -52,7 +53,7 @@ public:
     /// コンストラクタ。
     /// </summary>
     /// <param name='vertexMax'>頂点の最大登録数を指定する。Graph.resizeで後から変更できる。</param>
-    /// <param name='edgeMax'>辺の最大登録数を指定する。Graph.resizeで後から変更できる。</param>
+    /// <param name='edgeMax'>辺の最大登録数を指定する。無向グラフの場合、辺の数×2を指定する。Graph.resizeで後から変更できる。</param>
     Graph(int vertexMax, int edgeMax) {
         edgeMax++;
         head = std::vector<int>(vertexMax, 0);
@@ -109,6 +110,30 @@ public:
         to.resize(edgeMax);
         from.resize(edgeMax);
         next.resize(edgeMax);
+    }
+
+    /// <summary>
+    /// @NoUnitTest
+    /// 次の形式の標準入力を読み取る。
+    /// ・各行に辺の情報を、("始点" "終点")の順で入力する。
+    /// </summary>
+    /// <param name="line">入力行数</param>
+    /// <param name="isDirect">有向グラフはtrue、無向グラフはfalse。</param>
+    void read(int line, bool isDirect) {
+        if (isDirect) {
+            for (int i = 0; i < line; i++) {
+                int s, e;
+                std::cin >> s >> e;
+                add_directed_edge(s, e);
+            }
+        }
+        else {
+            for (int i = 0; i < line; i++) {
+                int s, e;
+                std::cin >> s >> e;
+                add_undirected_edge(s, e);
+            }
+        }
     }
 
 };
