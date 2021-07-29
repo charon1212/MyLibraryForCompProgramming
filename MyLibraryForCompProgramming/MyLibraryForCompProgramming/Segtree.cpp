@@ -1,4 +1,5 @@
 #include <vector>
+#include <limits>
 
 /// <summary>
 /// セグメント木。
@@ -87,3 +88,18 @@ public:
     }
 
 };
+
+// ■Range Minimum Query
+template <typename T> T e_segtree_min() { return std::numeric_limits<T>::max(); }
+template <typename T> T op_segtree_min(T a, T b) { return std::min(a, b); }
+template <typename T> using SegtreeMin = Segtree<T, e_segtree_min, op_segtree_min>;
+// ■Range Maximum Query
+template <typename T> T e_segtree_max() { return std::numeric_limits<T>::min(); }
+template <typename T> T op_segtree_max(T a, T b) { return std::max(a, b); }
+template <typename T> using SegtreeMax = Segtree<T, e_segtree_max, op_segtree_max>;
+// ■Sum
+template <typename T> T e_segtree_sum() { return 0; }
+template <typename T> T op_segtree_sum(T a, T b) { return a + b; }
+template <typename T> using SegtreeSum = Segtree<T, e_segtree_sum, op_segtree_sum>;
+
+
