@@ -155,6 +155,7 @@
     <ClCompile Include="ModInt.cpp" />
     <ClCompile Include="MyLibraryForCompProgramming.cpp" />
     <ClCompile Include="Prime.cpp" />
+    <ClCompile Include="Segtree.cpp" />
     <ClCompile Include="VectorUtil.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
