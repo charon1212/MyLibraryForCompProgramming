@@ -101,5 +101,3 @@ template <typename T> using SegtreeMax = Segtree<T, e_segtree_max, op_segtree_ma
 template <typename T> T e_segtree_sum() { return 0; }
 template <typename T> T op_segtree_sum(T a, T b) { return a + b; }
 template <typename T> using SegtreeSum = Segtree<T, e_segtree_sum, op_segtree_sum>;
-
-

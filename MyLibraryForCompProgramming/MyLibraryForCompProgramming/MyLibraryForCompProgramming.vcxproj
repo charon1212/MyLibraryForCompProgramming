@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -151,11 +151,13 @@
     <ClCompile Include="Debugger.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="Factorial.cpp" />
+    <ClCompile Include="LazySegtree.cpp" />
     <ClCompile Include="Math.cpp" />
     <ClCompile Include="ModInt.cpp" />
     <ClCompile Include="MyLibraryForCompProgramming.cpp" />
     <ClCompile Include="Prime.cpp" />
     <ClCompile Include="Segtree.cpp" />
+    <ClCompile Include="UnionFind.cpp" />
     <ClCompile Include="VectorUtil.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
